@@ -16,8 +16,8 @@ using Random, LinearAlgebra, Test
 using Bijectors: Log, Exp, Shift, Scale, Logit, SimplexBijector, PDBijector, Permute,
     PlanarLayer, RadialLayer, Stacked, TruncatedBijector, ADBijector
 
-using DistributionsAD: TuringUniform, TuringMvNormal, TuringMvLogNormal,
-    TuringPoissonBinomial
+using ChangesOfVariables: test_with_logabsdet_jacobian
+using InverseFunctions: test_inverse
 
 const GROUP = get(ENV, "GROUP", "All")
 
